@@ -1,0 +1,34 @@
+package com.mervenuradler;
+
+import java.lang.reflect.Array;
+
+public class Soru2 {
+
+	static int TekrarliSayi(int dizi[], int min, int max) {
+
+		if (min > max)
+			return -1;
+
+		int mid = (min + max) / 2;
+
+		if (dizi[mid] != mid + 1) {
+			if (mid > 0 && dizi[mid] == dizi[mid - 1])
+				return mid;
+
+			return TekrarliSayi(dizi, min, mid - 1);
+		}
+
+		return TekrarliSayi(dizi, mid + 1, max);
+	}
+
+	public static void main(String[] args) {
+		int dizi[] = { 9, 7, 5, 3, 7, 7, 3, 18, 2, 0, 7 };
+		int index = TekrarliSayi(dizi, 0, dizi.length - 1);
+		if (index != -1) {
+			System.out.println("İlk tekrar eden sayı : " + dizi[index]);
+		} else {
+			System.out.println("Tekrar eden sayı bulunamamıştır");
+		}
+	}
+
+}

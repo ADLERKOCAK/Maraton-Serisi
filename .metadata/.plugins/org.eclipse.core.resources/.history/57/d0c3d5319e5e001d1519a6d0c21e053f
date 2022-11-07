@@ -1,0 +1,32 @@
+package com.mervenuradler;
+
+import java.util.Scanner;
+
+public class Soru3 {
+
+
+public static void karakterSayici(String x, char y) {
+	
+	
+
+	
+		
+		int sayac=0;
+		for (int i = 0; i < x.length(); i++) {
+			if(x.charAt(i)==y) {
+				sayac++;
+				
+			}
+			
+		}
+		System.out.println("Cümle içinde  " + y +" harfi " + sayac + " tanedir. ");
+		
+	}
+
+	public static void main(String[] args) {
+		
+		
+
+	
+}
+}

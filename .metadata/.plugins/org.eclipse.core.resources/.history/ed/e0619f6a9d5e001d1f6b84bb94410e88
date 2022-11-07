@@ -1,0 +1,36 @@
+package com.mervenuradler;
+
+import java.util.Scanner;
+
+public class Soru3 {
+
+
+public static void karakterSayici(String x, char y) {
+	
+	
+	
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("Cümle giriniz: ");
+	
+	String cumle = scanner.nextLine();
+	
+		
+		int sayac=0;
+		for (int i = 0; i < x.length(); i++) {
+			if(x.charAt(i)==y) {
+				sayac++;
+				
+			}
+			
+		}
+		System.out.println("Metnin içinde " + y +" harfi " + sayac + " tane geçiyor");
+		
+	}
+
+	public static void main(String[] args) {
+		
+		
+
+	
+}
+}
